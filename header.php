@@ -45,23 +45,41 @@
 
     <div class="main-wrapper">
         <?php if (!is_front_page() && !is_404()) : ?>
+
+            <?php
+            $breadcrumb = '';
+            $page_title = '';
+
+            if (is_search()) {
+                $breadcrumb = sprintf('Resultados: %s', get_search_query());
+                $page_title = $breadcrumb;
+            } elseif (is_archive()) {
+                ob_start();
+                the_archive_title();
+                $breadcrumb = ob_get_clean();
+                $page_title = $breadcrumb;
+            } elseif (is_single()) {
+                $page_title = get_the_title();
+                $breadcrumb = $page_title;
+            } elseif (is_page()) {
+                $page_title = get_the_title();
+                $breadcrumb = $page_title;
+            } else {
+                $page_title = get_the_title();
+                $breadcrumb = $page_title;
+            }
+            ?>
+
             <header class="page-title">
-                <h2 class="heading">
-                    <?php
-                        if (function_exists('is_shop')) {
-                            echo 'Tienda';
-                        } elseif (is_search()) {
-                            printf('Resultados: %s', get_search_query());
-                        } elseif (is_archive()) {
-                            the_archive_title();
-                        } elseif (is_single()) {
-                            the_title();
-                        } elseif (is_page()) {
-                            the_title();
-                        } else {
-                            the_title();
-                        }
-                    ?>
-                </h2>
+                <div class="gray-overlay">
+                    <h1 class="heading">
+                        <?php echo $page_title; ?>
+                    </h1>
+                    <div class="breadcrumbs">
+                        <i class="fa-solid fa-thumbtack me-2"></i>
+                        <a href="<?php echo esc_url(home_url('/')); ?>">Inicio</a> / <?php echo $breadcrumb; ?>
+                    </div>
+                </div>
             </header>
+
         <?php endif; ?>

@@ -11,9 +11,6 @@
 /template-parts/call-to-action.php
 /template-parts/company-description.php
 /template-parts/contact-info.php
-/template-parts/content-archive.php
-/template-parts/content-article.php
-/template-parts/content-page.php
 /template-parts/featured-services.php
 /template-parts/food-brands.php
 /template-parts/image-slider.php
@@ -47,12 +44,9 @@ woocomerce.php
 /scss/_blog.scss
 /scss/_call-to-action-wapp.scss
 /scss/_call-to-action.scss
-/scss/_comments.scss
 /scss/_events-grid.scss
 /scss/_featured-services.scss
 /scss/_food-brands.scss
-/scss/_footer.scss
-/scss/_form.scss
 /scss/_image-slider.scss
 /scss/_our-values.scss
 /scss/_pagination.scss

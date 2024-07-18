@@ -1,0 +1,51 @@
+form {
+
+    input,
+    textarea {
+        border: 1px solid var(--light);
+        background-color: var(--darkwhite);
+        outline: none;
+        color: var(--gray);
+        padding: .3rem 1rem;
+    }
+}
+
+// Contact form 7 overrides
+.wpcf7-form {
+    width: 100% !important;
+
+    label {
+        width: 100% !important;
+
+        span {
+            width: 100% !important;
+
+            input,
+            textarea {
+                width: 100% !important;
+            }
+        }
+    }
+
+    input[type="submit"] {
+        padding: .4rem 2rem !important;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        margin-bottom: 1rem 0 !important;
+        transition: var(--main-transition);
+
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+        color: var(--white) !important;
+
+        &:hover,
+        &:active {
+            background-color: var(--secondary) !important;
+            border-color: var(--secondary) !important;
+            color: var(--white) !important;
+        }
+    }
+}

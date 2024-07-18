@@ -69,6 +69,10 @@ small {
     background-color: #00000069;
 }
 
+.primary-overlay {
+    background-color: var(--primary-transparent);
+}
+
 .dark-gradient-overlay {
     background: #00000063;
     background: linear-gradient(0deg, var(--dark-primary) 0%, rgba(0, 0, 0, 0) 100%);
@@ -121,22 +125,49 @@ small {
 }
 
 .page-title {
-    position: sticky;
-    z-index: 10;
-    top: 0;
+    position: relative;
     text-align: center;
-    background-color: var(--dark-primary);
-    padding: .5rem 0;
-    transition: all .2s;
+    background-image: url('./assets/images/page-title.jpg');
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    .gray-overlay {
+        padding: 7rem 0 2rem;
 
-    .heading {
-        color: var(--light);
-        margin-bottom: 0;
+        .heading {
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumbs {
+            display: none;
+
+            color: var(--yellow);
+
+            a {
+                color: var(--yellow) !important;
+            }
+        }
     }
 }
 
-.sticky {
-    padding: .2rem 0 !important;
+@media screen and (min-width: 992px) {
+    .page-title {
+        .gray-overlay {
+            padding: 12rem 0 7rem;
+
+            .heading {
+                font-size: 2.5rem;
+            }
+
+            .breadcrumbs {
+                display: block;
+            }
+        }
+    }
 }
 
 .social-icons {
@@ -183,10 +214,10 @@ small {
 header.content-header {
     .meta {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        gap: 1rem;
+        gap: .5rem;
 
         color: var(--gray);
         font-size: var(--font-small);
@@ -211,6 +242,14 @@ header.content-header {
             &:last-child:after {
                 display: none;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header.content-header {
+        .meta {
+            flex-direction: row;
         }
     }
 }

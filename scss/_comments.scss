@@ -1,0 +1,154 @@
+.comments-wrapper,
+.woocommerce-Reviews {
+    margin: 5rem 0 0;
+
+    .comments-header {
+        margin-bottom: 20px;
+
+        .comment-reply-title {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .comments-inner {
+        margin-bottom: 20px;
+    }
+
+    .comment,
+    .review {
+        background-color: var(--lightgray);
+        padding: 2rem;
+        margin-bottom: 1rem;
+        border: 1px solid var(--lightgray);
+
+        .comment-author.vcard,
+        .comment_container {
+            font-weight: bold;
+
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+
+        .comment-meta {
+            font-size: .7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 1rem 0;
+        }
+
+        .reply {
+            margin-top: 1rem;
+            
+            a {
+                border: 1px solid var(--light);
+                padding: .5rem 1rem;
+                transition: var(--main-transition);
+
+                &:hover,
+                &:active {
+                    background-color: var(--light);
+                }
+            }
+        }
+    }
+
+
+    .comment-content {
+        margin-top: 10px;
+    }
+
+    .comment-form {
+        margin-top: 40px;
+
+        .comment-notes {
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .comment-form-author,
+        .comment-form-email,
+        .comment-form-url {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .comment-form-submit {
+            .submit {
+                background-color: #0073aa;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: #005689;
+                }
+            }
+        }
+    }
+}
+
+.comment-respond {
+    background-color: var(--darkwhite);
+    color: var(--gray);
+    padding: 2rem;
+
+    .logged-in-as {
+        margin-bottom: 1rem;
+
+        a {
+            margin-left: 1rem;
+            font-weight: 700;
+        }
+    }
+
+    .required-field-message {
+        display: block;
+        font-size: .8rem;
+        margin-top: 1rem;
+    }
+
+    .comment-form-comment {
+        label {
+            display: block;
+        }
+
+        textarea {
+            width: 100%;
+        }
+    }
+
+    input {
+        display: block;
+    }
+
+    .comment-form-cookies-consent {
+        input {
+            display: inline-block;
+        }
+    }
+
+    .form-submit {
+        input.submit {
+            transition: var(--main-transition);
+
+            &:hover,
+            &:active {
+                background-color: var(--light);
+            }
+        }
+    }
+}
