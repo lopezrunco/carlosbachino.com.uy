@@ -94,7 +94,7 @@ small {
 
 @media screen and (min-width: 992px) {
     .section-title {
-        width: 80%;
+        width: 60%;
     }
 }
 
@@ -262,7 +262,7 @@ header.content-header {
     width: 100px;
     height: 5px;
     background-color: var(--light-primary);
-    margin: 1rem auto 4rem;
+    margin: 2rem auto;
 }
 
 .quote {
@@ -305,7 +305,7 @@ header.content-header {
     }
 }
 
-// Posts
+// Event posts
 
 .posts-wrapper {
     margin: 1rem;
@@ -323,6 +323,7 @@ header.content-header {
                 width: 100%;
                 height: auto;
                 opacity: 1;
+                transition: var(--main-transition);
 
                 &:hover {
                     opacity: .9;

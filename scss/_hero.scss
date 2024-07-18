@@ -1,8 +1,9 @@
 .hero {
     background-image: url('./assets/images/hero.jpg');
-    background-position: center;
+    background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 
     .gray-overlay {
         padding-top: 5rem;

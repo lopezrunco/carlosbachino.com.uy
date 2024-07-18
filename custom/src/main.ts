@@ -142,12 +142,12 @@ const renderData = async (posts: any[]) => {
     const singlePostWrapper = d.createElement("div");
     singlePostWrapper.classList.add("single-post-wrapper");
 
+    const detailsButton: string = post.content.rendered
+    ? `<a href="#" class="btn btn-outline details-button" data-post-id="${post.id}">Ver detalles <i class="fa-solid fa-chevron-right"></i></a>`
+    : "";
+
     const broadcastButton: string = broadcastLink
       ? `<a href="${broadcastLink}" target="_blank" class="btn btn-primary">Transmisión <i class="fa-solid fa-video"></i></a>`
-      : "";
-
-    const detailsButton: string = post.content.rendered
-      ? `<a href="#" class="btn btn-primary details-button" data-post-id="${post.id}">Ver detalles <i class="fa-solid fa-chevron-right"></i></a>`
       : "";
 
     singlePostWrapper.innerHTML = `<div class="item-wrapper">

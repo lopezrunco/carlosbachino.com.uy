@@ -18,6 +18,6 @@ get_template_part('template-parts/services');
 
 // get_template_part('template-parts/featured-services');
 // get_template_part('template-parts/instagram-feed');
-// get_template_part('template-parts/brands');
+get_template_part('template-parts/latest-posts-by-category');
 get_footer();
 ?>

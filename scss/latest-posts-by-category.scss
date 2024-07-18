@@ -1,0 +1,34 @@
+.latest-posts-by-category {
+    .new-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .post-thumbnail {
+            object-fit: cover;
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                transition: var(--main-transition);
+
+                &:hover {
+                    opacity: .9;
+                }
+            }
+
+            .read-more {
+                width: fit-content;
+            }
+        }
+
+        a.read-more {
+            max-width: fit-content;
+        }
+    }
+}

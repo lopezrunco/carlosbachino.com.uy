@@ -18,7 +18,6 @@
 /template-parts/food-brands.php
 /template-parts/image-slider.php
 /template-parts/instagram-feed.php
-/template-parts/latest-news.php
 /template-parts/map.php
 /template-parts/our-staff.php
 /template-parts/our-values.php
@@ -55,7 +54,6 @@ woocomerce.php
 /scss/_footer.scss
 /scss/_form.scss
 /scss/_image-slider.scss
-/scss/_news-grid.scss
 /scss/_our-values.scss
 /scss/_pagination.scss
 /scss/_product-categories.scss
