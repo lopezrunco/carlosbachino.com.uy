@@ -17,7 +17,7 @@ get_template_part('template-parts/services');
 // End Why us section variables and template part
 
 // get_template_part('template-parts/featured-services');
-// get_template_part('template-parts/instagram-feed');
 get_template_part('template-parts/latest-posts-by-category');
+get_template_part('template-parts/instagram-feed');
 get_footer();
 ?>
