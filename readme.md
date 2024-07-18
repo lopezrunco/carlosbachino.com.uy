@@ -4,7 +4,7 @@
 
 Carlos Bachino Agronegocios WP theme is a versatile and customizable theme designed specifically for agro companies. With a sleek design and user-friendly interface, it offers a seamless experience for both website administrators and visitors.
 
-![Screenshot](screenshot.png)
+![Screenshot](./screenshot.png)
 
 ## Technologies Used:
 
