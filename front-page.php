@@ -2,6 +2,7 @@
 get_header();
 get_template_part('template-parts/hero');
 get_template_part('template-parts/upcoming-events');
+get_template_part('template-parts/services');
 
 // Start Why us section variables and template part
 // $wu_left_subtitle = '¿Por qué elegirnos?';

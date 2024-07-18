@@ -3,6 +3,7 @@
         <div class="row">
             <div class="col-12 text-center ">
                 <h2>Próximos remates</h2>
+                <p>Estos son los próximos remates en los que estreamos participando.</p>
                 <div class="separator"></div>
             </div>
         </div>
