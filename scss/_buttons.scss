@@ -1,0 +1,66 @@
+// Bootstrap overrides
+
+.btn {
+    border-radius: 0 !important;
+    padding: .6rem 2rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin: 1rem 0 !important;
+    font-weight: 700 !important;
+    transition: var(--main-transition);
+}
+
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+
+    &:hover,
+    &:active {
+        background-color: var(--dark-primary) !important;
+        border-color: var(--dark-primary) !important;
+        color: var(--white) !important;
+    }
+}
+
+.btn-secondary {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: var(--white) !important;
+
+    &:hover,
+    &:active {
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+        color: var(--white) !important;
+    }
+}
+
+.btn-light {
+    background-color: var(--white) !important;
+    border-color: var(--white) !important;
+    color: var(--gray) !important;
+
+    &:hover,
+    &:active {
+        background-color: var(--primary) !important;
+        border-color: var(--primary) !important;
+        color: var(--white) !important;
+    }
+}
+
+.btn-dark {
+    background-color: var(--dark) !important;
+    border-color: var(--dark) !important;
+    color: var(--white) !important;
+
+    &:hover,
+    &:active {
+        background-color: var(--white) !important;
+        border-color: var(--white) !important;
+        color: var(--dark) !important;
+    }
+}

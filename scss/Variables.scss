@@ -1,0 +1,49 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #f95473;
+    --red: #dc3545;
+    --orange: #ffc130;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --white-semi-transparent: #ffffff9c;
+    --white-transparent: #ffffff57;
+    --darkwhite: #f8f9fa;
+    --gray: #767575;
+    --gray-dark: #434242;
+    --light-primary: #266446;
+    --primary: #20543b;
+    --dark-primary: #333333;
+    --secondary: #40DAC1;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #c2c2c2;
+    --lightgray: #eeeeee;
+    --dark: #434242;
+    --darktransparent: #353535f1;
+    --light-whatsapp: #25d366;
+    --dark-whatsapp: #008069;
+    --box-shadow:0px 5px 8px 1px rgba(0,0,0,0.04);
+    --text-shadow: 5px 5px 20px #000000ab;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family: "Poppins", sans-serif;
+    /* Font Sizes */
+    --font-normal: 1rem;
+    --font-small: 0.8rem;
+    /* Sidebar */
+    --sidebar-width: 280px;
+    --content-max-width: 1300px;
+
+    --border-radius: 4px;
+    --main-transition: all ease-in-out .25s;
+}

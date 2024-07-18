@@ -1,0 +1,38 @@
+/* 
+Theme Name: Carlos Bachino Agronegocios WP Theme
+Text Domain: Carlos Bachino Agronegocios WP Theme
+Version: 1.0
+Description: Carlos Bachino Agronegocios WP Theme
+Tags: responsive, theme, wordpress
+Author: Damian Lopez runco
+Author URI: https://damian-lopez.web.app/
+*/
+
+@import './Variables.scss';
+@import './general';
+@import './text';
+@import './buttons';
+@import './form';
+@import './top';
+@import './nav';
+@import './hero';
+@import './image-slider';
+@import './blog';
+@import './product-categories';
+@import './product-grid';
+@import './news-grid';
+@import './call-to-action';
+@import './call-to-action-wapp';
+@import './food-brands';
+@import './testimonials';
+@import './our-values';
+@import './featured-services';
+@import './services-page';
+@import './staff-grid';
+@import './modal';
+@import './search-results';
+@import './comments';
+@import './pagination';
+@import './bottom.scss';
+@import './footer';
+@import './whatsapp-link';

@@ -1,0 +1,11 @@
+{
+  "name": "carlosbachino.com.uy-custom-posts-module",
+  "version": "1.0.0",
+  "scripts": {
+    "build:ts": "tsc",
+    "build": "npm run build:ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}
