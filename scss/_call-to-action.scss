@@ -1,0 +1,22 @@
+.call-to-action {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 0;
+
+    .content-wrapper {
+        padding: 10rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
+
+        h6,
+        h1 {
+            color: var(--white);
+        }
+    }
+}

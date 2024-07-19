@@ -8,14 +8,11 @@
 
 /template-parts/bottom-hero.php
 /template-parts/brands.php
-/template-parts/call-to-action.php
-/template-parts/company-description.php
 /template-parts/contact-info.php
 /template-parts/featured-services.php
 /template-parts/food-brands.php
 /template-parts/image-slider.php
 /template-parts/map.php
-/template-parts/our-staff.php
 /template-parts/our-values.php
 /template-parts/testimonials.php
 /template-parts/top-hero.php
@@ -23,7 +20,6 @@
 /template-parts/why-us.php
 
 404.php
-about.php
 archive.php
 blog.php
 comments.php
@@ -41,7 +37,6 @@ woocomerce.php
 
 /scss/_blog.scss
 /scss/_call-to-action-wapp.scss
-/scss/_call-to-action.scss
 /scss/_events-grid.scss
 /scss/_featured-services.scss
 /scss/_food-brands.scss
@@ -52,6 +47,5 @@ woocomerce.php
 /scss/_product-grid.scss
 /scss/_search-results.scss
 /scss/_services-page.scss
-/scss/_staff-grid.scss
 /scss/_testimonials.scss
 /scss/_top.scss

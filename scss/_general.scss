@@ -314,7 +314,7 @@ header.content-header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: var(--secondary);
+    background-color: var(--light-primary);
     width: 90%;
     margin: 0 auto;
     overflow: hidden;
@@ -324,7 +324,7 @@ header.content-header {
     .quotes-icon {
         font-size: 10rem;
         color: var(--white);
-        opacity: .3;
+        opacity: .1;
         position: absolute;
         top: -3rem;
         left: -1rem;
@@ -333,14 +333,14 @@ header.content-header {
 
     h5 {
         font-weight: 700;
-        color: var(--dark);
+        color: var(--white);
     }
 }
 
 @media screen and (min-width: 1200px) {
     .quote {
-        width: 80%;
-        padding: 4rem 6rem;
+        width: 90%;
+        padding: 2rem 3rem;
     }
 }
 

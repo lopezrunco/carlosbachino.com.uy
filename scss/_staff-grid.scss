@@ -1,0 +1,17 @@
+.staff-grid {
+    .content-wrapper {
+        .image-wrapper {
+            overflow: hidden;
+
+            img {
+                cursor: pointer;
+                transition: var(--main-transition);
+
+                &:hover,
+                &:active {
+                    transform: scale(1.025);
+                }
+            }
+        }
+    }
+}
