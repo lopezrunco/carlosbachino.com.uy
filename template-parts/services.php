@@ -2,7 +2,7 @@
     <article class="container">
         <div class="row">
             <div class="col-lg-4 mb-5">
-                <div class="content-wrapper thick-border p-5">
+                <div class="content-wrapper thick-border-light p-5">
                     <i class="fa-solid fa-handshake icon"></i>
                     <h4>Negocios Inmobiliarios</h4>
                     <p>
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="col-lg-4 mb-5">
-                <div class="content-wrapper thick-border p-5">
+                <div class="content-wrapper thick-border-light p-5">
                     <i class="fa-solid fa-gavel icon"></i>
                     <h4>Remates especiales</h4>
                     <p>Realizamos a lo largo del año remates especiales de equinos psc y criollos, y de reproductores y vientres bovinos y ovinos.</p>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="col-lg-4 mb-5">
-                <div class="content-wrapper thick-border p-5">
+                <div class="content-wrapper thick-border-light p-5">
                     <i class="fa-solid fa-hand-holding-dollar icon"></i>
                     <h4>Tasaciones</h4>
                     <p>Creamos una sección especializada en tasaciones, prestando servicios tanto a particulares como a instituciones financieras nacionales e internacionales.</p>
@@ -44,7 +44,7 @@
             </div>
 
             <div class="col-lg-4 mb-5">
-                <div class="content-wrapper thick-border p-5">
+                <div class="content-wrapper thick-border-light p-5">
                     <i class="fa-solid fa-cow icon"></i>
                     <h4>Consignaciones</h4>
                     <p>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="col-lg-4 mb-5">
-                <div class="content-wrapper thick-border p-5">
+                <div class="content-wrapper thick-border-light p-5">
                     <i class="fa-solid fa-comments-dollar icon"></i>
                     <h4>Ventas Particulares</h4>
                     <p>

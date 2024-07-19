@@ -437,6 +437,10 @@ header.content-header {
     }
 }
 
-.thick-border {
+.thick-border-light {
     border: 3px solid var(--white-transparent);
+}
+
+.thick-border-dark {
+    border: 3px solid var(--lightgray);
 }
