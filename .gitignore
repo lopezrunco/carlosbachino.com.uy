@@ -8,7 +8,6 @@
 
 /template-parts/bottom-hero.php
 /template-parts/brands.php
-/template-parts/contact-info.php
 /template-parts/featured-services.php
 /template-parts/food-brands.php
 /template-parts/image-slider.php
@@ -20,7 +19,6 @@
 /template-parts/why-us.php
 
 404.php
-page-contact.php
 search.php
 style.css
 style.css.map
