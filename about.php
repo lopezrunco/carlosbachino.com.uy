@@ -3,7 +3,7 @@
 /**
  * Template Name: About
  * 
- * @package Vetexoticos WP Theme
+ * @package Carlos Bachino Agronegocios WP Theme
  */
 
 get_header(); 
