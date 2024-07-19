@@ -1,4 +1,4 @@
-<section class="bottom bg-primary">
+<section class="bottom bg-dark">
     <article class="container">
         <div class="row">
             <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
