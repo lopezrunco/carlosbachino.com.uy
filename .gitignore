@@ -21,7 +21,6 @@
 
 404.php
 archive.php
-blog.php
 comments.php
 footer.php
 index.php
@@ -34,7 +33,6 @@ style.css.map
 test.php
 woocomerce.php
 
-/scss/_blog.scss
 /scss/_call-to-action-wapp.scss
 /scss/_events-grid.scss
 /scss/_featured-services.scss
