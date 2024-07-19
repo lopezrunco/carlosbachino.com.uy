@@ -20,18 +20,11 @@
 /template-parts/why-us.php
 
 404.php
-archive.php
-comments.php
-footer.php
-index.php
 page-contact.php
-page.php
 search.php
-single.php
 style.css
 style.css.map
 test.php
-woocomerce.php
 
 /scss/_call-to-action-wapp.scss
 /scss/_events-grid.scss
