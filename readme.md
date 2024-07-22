@@ -93,13 +93,17 @@ Once the containers are up and running, you can access the WordPress installatio
 Follow the on-screen instructions to complete the WordPress installation.
 
 ### 6. Manage Your Docker Containers
-To stop the containers, run:
+To list all running containers:
 ```sh
-    docker-compose down
+    docker ps
 ```
-To start them again, run:
+To list all containers (running and stopped):
 ```sh
-    docker-compose up -d
+    docker ps -a
+```
+To start a container:
+```sh
+    docker start <container_id_or_name>
 ```
 
 ## Run via XAMPP:
