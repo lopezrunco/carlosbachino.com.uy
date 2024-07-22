@@ -22,10 +22,10 @@ get_template_part('template-parts/contact-info');
             <div class="col-lg-7 offset-lg-3 mb-5 mb-lg-0">
                 <?php
                 // Dev form
-                echo do_shortcode('[contact-form-7 id="64c307e" title="Contact form"]');
+                // echo do_shortcode('[contact-form-7 id="64c307e" title="Contact form"]');
 
                 // Prod form
-                // echo do_shortcode('[contact-form-7 id="949b6a3" title="Formulario de contacto 1"]'); 
+                echo do_shortcode('[contact-form-7 id="63d971a" title="Formulario de contacto"]'); 
                 ?>
             </div>
             <div class="col-12">

@@ -13,7 +13,7 @@ const postsToFetch: number =
   dataPostsAttr !== null ? parseInt(dataPostsAttr, 10) : 3;
 
 const URL: string = `${SITE_URL}${ApiEndpoint}`;
-const categoryId: number = 4;
+const categoryId: number = 11;
 const categoryUrl: string = `${URL}?categories=${categoryId}&per_page=${postsToFetch}`;
 
 const createModal = () => {
@@ -68,12 +68,12 @@ const addModalListeners = () => {
                     const postData: any = await response.json()
 
                     const title: string = postData.title.rendered
-                    const location: string = postData.ubicacion
-                    const modality: string = postData.modalidad
-                    const breeder: string = postData.cabana
+                    const location: string = postData.acf.ubicacion
+                    const modality: string = postData.acf.modalidad
+                    const breeder: string = postData.acf.cabana
                     const fullContent: string = postData.content.rendered
 
-                    const date: Date = new Date(postData.inicio_del_remate)
+                    const date: Date = new Date(postData.acf.inicio_del_remate)
                     const year: number = date.getFullYear()
                     const month: string = months[date.getMonth() + 1]
                     const day: number = date.getDate()
@@ -123,17 +123,14 @@ const renderData = async (posts: any[]) => {
   for (const post of posts) {
     // const startDate = new Date(post.inicio_del_remate);
     const startDate = new Date(post.date);
-    console.log('=> ', startDate)
+    // console.log('=> ', startDate)
 
     const title: string = post.title.rendered;
     const imageUrl: string = await getImageUrl(post)
-    const location: string = post.ubicacion;
-    const modality: string = post.modalidad;
-    const breeder: string = post.cabana;
-
-    const excerptHtml = post.excerpt.rendered;
-    const match = excerptHtml.match(/<p>(.*?)<\/p>/); 
-    const broadcastLink = match ? match[1] : '';
+    const location: string = post.acf.ubicacion;
+    const modality: string = post.acf.modalidad;
+    const breeder: string = post.acf.cabana;
+    const broadcastLink: string = post.acf.enlace_transmision;
 
     const year: number = startDate.getFullYear();
     const month: string = months[startDate.getMonth() + 1];
