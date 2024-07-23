@@ -194,6 +194,7 @@ This is a TypeScript module that was design to running embeded on this theme an 
 
    ```html
      <div id="root" data-posts="3"></div>
+     <div id="skeleton"></div>
      <script src="/custom/src/main.js" type="module"></script>
    ```
 
