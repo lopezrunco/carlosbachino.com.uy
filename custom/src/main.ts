@@ -1,6 +1,7 @@
 import { SITE_URL, ApiEndpoint } from "../config.js";
 
 import { Post } from "./interfaces/post.js";
+import { createSkeleton } from "./utils/create-skeleton.js";
 
 import { getImageUrl } from "./utils/get-image-url.js";
 import { months } from "./utils/months.js";
@@ -11,6 +12,8 @@ const dataPostsAttr: string | null =
   rootElement?.getAttribute("data-posts") ?? null;
 const postsToFetch: number =
   dataPostsAttr !== null ? parseInt(dataPostsAttr, 10) : 3;
+
+const skeletonContainer = document.getElementById("skeleton");
 
 const URL: string = `${SITE_URL}${ApiEndpoint}`;
 const categoryId: number = 11;
@@ -121,6 +124,13 @@ const renderData = async (posts: any[]) => {
   let postsWrapper = d.createElement("div");
   postsWrapper.classList.add("posts-wrapper");
 
+  // Clean the skeleton.
+  if (!rootElement) {
+    console.error('Root element not found')
+    return
+  }
+  rootElement.innerHTML = ''
+
   for (const post of posts) {
     const currentDate = new Date();
     const startDate = new Date(post.acf.inicio_del_remate);
@@ -154,7 +164,7 @@ const renderData = async (posts: any[]) => {
 
     const broadcastButton: string = broadcastLink
       ? `<a href="${broadcastLink}" target="_blank" class="btn btn-${broadCasting ? 'primary' : 'outline'}">
-        ${broadCasting ? "En vivo ahora." : "Enlace transmisión."} 
+        ${broadCasting ? "En vivo ahora" : "Enlace transmisión"} 
         <i class="fa-solid fa-video"></i></a>`
       : "";
 
@@ -181,10 +191,14 @@ const renderData = async (posts: any[]) => {
   if (rootElement) {
     rootElement.appendChild(postsWrapper);
   }
+  if (skeletonContainer) {
+    skeletonContainer.innerHTML = '';
+  }
   addModalListeners();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  createSkeleton()
   createModal();
   fetchData();
 });
