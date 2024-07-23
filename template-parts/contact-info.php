@@ -1,5 +1,5 @@
 <section class="contact-info bg-light">
-    <article class="container">
+    <article class="container fade-in delay-level3">
         <div class="row">
             <div class="col-12">
                 <div class="section-title">

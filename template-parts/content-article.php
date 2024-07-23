@@ -1,5 +1,5 @@
 <section>
-    <article class="container">
+    <article class="container fade-in delay-level3">
         <div class="row">
             <div class="col-lg-9">
                 <?php

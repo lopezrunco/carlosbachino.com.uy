@@ -1,5 +1,5 @@
 <section class="company-description">
-    <article class="container">
+    <article class="container fade-in delay-level3">
         <div class="row">
             <div class="col-12 col-lg-5">
                 <img width="100%" class="box-shadow" src="<?php echo get_template_directory_uri(); ?>/assets/images/carlos bachino local.jpg" alt="Local de Carlos Bachino" />

@@ -1,7 +1,7 @@
 <div class="hero">
 	<div class="gray-overlay">
 		<div class="container">
-			<div class="content-wrapper">
+			<div class="content-wrapper fade-in delay-level2">
 				<h6 class="subtitle">Bienvenido A Nuestro Sitio Web</h6>
 				<h1 class="title">Carlos Bachino Agronegocios</h1>
 				<?php

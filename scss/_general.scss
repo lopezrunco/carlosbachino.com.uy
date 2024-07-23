@@ -132,7 +132,7 @@ small {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+
     .gray-overlay {
         padding: 7rem 0 2rem;
 
@@ -434,4 +434,34 @@ header.content-header {
 
 .thick-border-dark {
     border: 3px solid var(--lightgray);
+}
+
+// In-Effects
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+
+    &.delay-level1 {
+        animation-duration: .7s;
+    }
+
+    &.delay-level2 {
+        animation-duration: 1s;
+    }
+
+    &.delay-level3 {
+        animation-duration: 1.5s;
+    }
 }

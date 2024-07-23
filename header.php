@@ -20,7 +20,7 @@
 <body>
     <header class="fixed-top">
         <nav class="navbar navbar-expand-xl bg-dark py-lg-0">
-            <div class="container">
+            <div class="container fade-in delay-level1">
                 <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
                     <img class="main-logo" alt="Logo de Carlos Bachino" src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" />
                 </a>
@@ -72,10 +72,10 @@
 
             <header class="page-title">
                 <div class="gray-overlay">
-                    <h1 class="heading">
+                    <h1 class="heading fade-in delay-level2">
                         <?php echo $page_title; ?>
                     </h1>
-                    <div class="breadcrumbs">
+                    <div class="breadcrumbs fade-in delay-level2">
                         <i class="fa-solid fa-thumbtack me-2"></i>
                         <a href="<?php echo esc_url(home_url('/')); ?>">Inicio</a> / <?php echo $breadcrumb; ?>
                     </div>

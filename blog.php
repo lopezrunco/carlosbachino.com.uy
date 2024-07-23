@@ -38,7 +38,7 @@ require_once('wp-load.php');
                         while ($query->have_posts()) {
                             $query->the_post();
                     ?>
-                            <div class="col-lg-6 mb-5">
+                            <div class="col-lg-6 mb-5 fade-in delay-level3">
                                 <div class="new-wrapper">
 
                                     <?php if (has_post_thumbnail()) : ?>
@@ -95,7 +95,7 @@ require_once('wp-load.php');
                 </div>
 
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-3 fade-in delay-level3">
                 <?php get_sidebar(); ?>
             </div>
         </div>

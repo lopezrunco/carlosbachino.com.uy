@@ -12,7 +12,7 @@ get_header();
 <section class="info-page">
     <article class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 fade-in delay-level3">
                 <?php get_template_part('template-parts/offices'); ?>
             </div>
         </div>
