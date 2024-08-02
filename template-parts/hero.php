@@ -9,6 +9,11 @@
 				echo '<a class="btn btn-primary" href="' . esc_url($contact_page_url) . '">Contáctenos <i class="fa-solid fa-chevron-right"></i></a>'
 				?>
 			</div>
+			<div class="video-bg">
+				<video autoplay muted loop playsinline preload="auto">
+					<source src="<?php echo get_template_directory_uri(); ?>/assets/videos/home-video.mp4" type="video/mp4">
+				</video>
+			</div>
 		</div>
 	</div>
 </div>

@@ -9,6 +9,8 @@
         padding-top: 5rem;
 
         .content-wrapper {
+            position: relative;
+            z-index: 1;
             padding: 7rem 0;
             width: 100%;
             display: flex;
@@ -19,7 +21,12 @@
             h1,
             a {
                 color: var(--white);
+                text-shadow: var(--text-shadow);
             }
+        }
+
+        .video-bg {
+            display: none;
         }
     }
 }
@@ -36,12 +43,30 @@
 
 @media screen and (min-width: 992px) {
     .hero {
+        background-image: none;
+        
         .gray-overlay {
             .content-wrapper {
                 width: 50%;
 
                 a.btn {
                     width: fit-content;
+                }
+            }
+
+            .video-bg {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 590px;
+                overflow: hidden;
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
         }
