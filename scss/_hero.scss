@@ -3,7 +3,6 @@
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
 
     .gray-overlay {
         padding-top: 5rem;
@@ -22,6 +21,10 @@
             a {
                 color: var(--white);
                 text-shadow: var(--text-shadow);
+            }
+
+            a.btn {
+                width: fit-content;
             }
         }
 
@@ -48,10 +51,6 @@
         .gray-overlay {
             .content-wrapper {
                 width: 50%;
-
-                a.btn {
-                    width: fit-content;
-                }
             }
 
             .video-bg {
