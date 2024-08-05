@@ -92,7 +92,7 @@
                 <div class="content-wrapper">
                     <i class="fa-solid fa-location-dot"></i>
                     <p class="description">Localización</p>
-                    <h5>Dionisio Coronel 1760 - Vergara</h5>
+                    <h5>Francisco Tajes esq. Manuel Coronel, S/N</h5>
                 </div>
             </div>
             <div class="col-lg-4">

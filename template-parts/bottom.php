@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
                 <h4>Treinta y Tres</h4>
-                <a><i class="me-3 fa-solid fa-location-dot"></i> Dionisio Coronel 1760 - Vergara</a>
+                <a><i class="me-3 fa-solid fa-location-dot"></i> Francisco Tajes esq. Manuel Coronel, S/N</a>
                 <a href="tel:+59844583524"><i class="me-3 fa-solid fa-phone"></i> 4458 3524</a>
                 <a href="tel:+59891339957"><i class="me-3 fa-solid fa-mobile"></i> 091 339 957</a>
                 <a><i class="me-3 fa-solid fa-envelope"></i> administracion <br>@carlosbachino.com</a>
