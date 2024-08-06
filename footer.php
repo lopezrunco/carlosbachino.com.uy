@@ -1,6 +1,6 @@
 <?php 
 get_template_part('template-parts/bottom'); 
-get_template_part('template-parts/whatsapp-link'); 
+get_template_part('template-parts/quick-links'); 
 ?>
 
 <footer class="footer text-center py-3 theme-bg-dark">
