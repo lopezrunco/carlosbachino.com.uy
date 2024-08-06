@@ -1,3 +1,11 @@
+<?php
+require_once get_template_directory() . '/functions.php';
+if (file_exists(STAFF_DATA_PATH)) {
+    $json_data = file_get_contents(STAFF_DATA_PATH);
+    $staff_data = json_decode($json_data, true);
+}
+?>
+
 <section class="staff-grid bg-light">
     <article class="container">
         <div class="row">
@@ -12,48 +20,19 @@
             </div>
         </div>
         <div class="row team">
-            <div class="col-lg-4 mb-5">
-                <div class="content-wrapper">
-                    <div class="image-wrapper mb-3">
-                        <img width="100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/staff-1.webp" alt="Integrante de Vetexoticos">
-                    </div>
-                    <h4>Camilo Machado</h4>
-                    <p class="description">Ejecutivo de Negocios</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-5">
-                <div class="content-wrapper">
-                    <div class="image-wrapper mb-3">
-                        <img width="100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/staff-2.webp" alt="Integrante de Vetexoticos">
-                    </div>
-                    <h4>Gabriela Pino  Sagastiberry</h4>
-                    <p class="description">Área Administrativa</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <?php foreach ($staff_data as $item) { ?>
+                <div class="col-lg-4 mb-5">
+                    <div class="content-wrapper">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="text-wrapper">
+                            <h5><?php echo esc_html($item['name']); ?></h5>
+                            <p class="description"><?php echo esc_html($item['description']); ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 mb-5">
-                <div class="content-wrapper">
-                    <div class="image-wrapper mb-3">
-                        <img width="100%" src="<?php echo get_template_directory_uri(); ?>/assets/images/staff-3.webp" alt="Integrante de Vetexoticos">
-                    </div>
-                    <h4>Leandro Zuluaga</h4>
-                    <p class="description">Ejecutivo de Negocios</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </article>
 </section>

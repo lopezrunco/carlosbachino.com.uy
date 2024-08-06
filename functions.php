@@ -1,5 +1,8 @@
 <?php
 
+// Define path constants.
+define('STAFF_DATA_PATH', get_template_directory() . '/data/staff.json');
+
 function starterwptheme_theme_support()
 {
     add_theme_support('title-tag');

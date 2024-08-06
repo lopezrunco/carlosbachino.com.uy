@@ -1,16 +1,20 @@
 .staff-grid {
     .content-wrapper {
-        .image-wrapper {
-            overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        box-shadow: var(--box-shadow);
 
-            img {
-                cursor: pointer;
-                transition: var(--main-transition);
+        .icon-wrapper {
+            i {
+                font-size: 2rem;
+            }
+        }
 
-                &:hover,
-                &:active {
-                    transform: scale(1.025);
-                }
+        .text-wrapper {
+            p {
+                margin-bottom: 0;
             }
         }
     }
