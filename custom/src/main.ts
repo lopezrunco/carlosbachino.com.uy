@@ -4,6 +4,7 @@ import { Post } from "./interfaces/post.js";
 import { createSkeleton } from "./utils/create-skeleton.js";
 
 import { getImageUrl } from "./utils/get-image-url.js";
+import { getBroadcastModal } from "./utils/getBroadcastModal.js";
 import { months } from "./utils/months.js";
 
 const d: Document = document;
@@ -124,6 +125,9 @@ const renderData = async (posts: any[]) => {
   let postsWrapper = d.createElement("div");
   postsWrapper.classList.add("posts-wrapper");
 
+  const broadcastingWrapper = d.createElement("div");
+  broadcastingWrapper.classList.add("broadcasting-wrapper");
+
   // Clean the skeleton.
   if (!rootElement) {
     console.error('Root element not found')
@@ -189,8 +193,13 @@ const renderData = async (posts: any[]) => {
         </div>`;
 
     postsWrapper.appendChild(singlePostWrapper);
+
+    if (broadCasting) {
+      broadcastingWrapper.innerHTML = `${getBroadcastModal(broadcastLink, title)}`
+    }
   }
   if (rootElement) {
+    rootElement.appendChild(broadcastingWrapper)
     rootElement.appendChild(postsWrapper);
   }
   if (skeletonContainer) {
