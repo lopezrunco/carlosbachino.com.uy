@@ -154,6 +154,7 @@ const renderData = async (posts: any[]) => {
     const year: number = startDate.getFullYear();
     const month: string = months[startDate.getMonth() + 1];
     const day: number = startDate.getDate();
+    const time: string = startDate.toLocaleTimeString('es-UY', { hour: '2-digit', minute: '2-digit', hour12: false })
 
     const singlePostWrapper = d.createElement("div");
     singlePostWrapper.classList.add("single-post-wrapper");
@@ -171,11 +172,12 @@ const renderData = async (posts: any[]) => {
     singlePostWrapper.innerHTML = `
         <div class="item-wrapper">
           <div class="image-wrapper">
-              <img src="${imageUrl}" alt="Imagen destacada de ${title}" />
+              <img src="${imageUrl}" alt="Imagen de ${title}" />
               <div class="metadata-wrapper">
                   <span>${day}</span>
                   <span>${month}</span>
                   <span>${year}</span>
+                  <span>${time}</span>
               </div>
           </div>
           <div class="info-wrapper">
