@@ -74,8 +74,11 @@ const addModalListeners = () => {
 
           const title: string = postData.title.rendered;
           const location: string = postData.acf.ubicacion;
+          const state: string = postData.acf.departamento;
+          const type: string = postData.acf.tipo_de_remate;
           const modality: string = postData.acf.modalidad;
           const breeder: string = postData.acf.cabana;
+          const financing: string = postData.acf.financiacion;
           const fullContent: string = postData.content.rendered;
 
           const date: Date = new Date(postData.acf.inicio_del_remate);
@@ -87,8 +90,15 @@ const addModalListeners = () => {
             fullContentDiv.innerHTML = `
                             <div class="meta">
                                 <h2>${title}</h2>
-                                <p><b>Fecha:</b> ${day} ${month} ${year}</p>
-                                <p><b>Lugar: </b> ${location} | <b>Cabaña: </b> ${breeder} | <b>Modalidad: </b> ${modality}</p>
+                                <p><i class="fa-solid fa-calendar-days me-2"></i> ${day} ${month} ${year}</p>
+                                <p>
+                                  ${location ? `<b>Ubicación: </b> ${location}` : ''}
+                                  ${state ? ` | <b>Departamento: </b> ${state}` : ''}
+                                  ${type ? ` | <b>Tipo de remate: </b> ${type}` : ''}
+                                  ${modality ? ` | <b>Modalidad: </b> ${modality}` : ''}
+                                  ${breeder ? ` | <b>Cabaña: </b> ${breeder}` : ''}
+                                  ${financing ? ` | <b>Financiación: </b> ${financing}` : ''}
+                                </p>
                             </div>
                             <div class="full-content">
                                 ${fullContent}
@@ -151,8 +161,11 @@ const renderData = async (posts: any[]) => {
     const title: string = post.title.rendered;
     const imageUrl: string = await getImageUrl(post);
     const location: string = post.acf.ubicacion;
+    const state: string = post.acf.departamento;
+    const type: string = post.acf.tipo_de_remate;
     const modality: string = post.acf.modalidad;
     const breeder: string = post.acf.cabana;
+    const financing: string = post.acf.financiacion;
     const broadcastLink: string = post.acf.enlace_transmision;
 
     const year: number = startDate.getFullYear();
@@ -186,7 +199,14 @@ const renderData = async (posts: any[]) => {
           </div>
           <div class="info-wrapper">
               <h3>${title}</h3>
-              <p><b>Lugar: </b> ${location} | <b>Cabaña: </b> ${breeder} | <b>Modalidad: </b> ${modality}</p>
+              <p>
+                ${location ? `<b>Ubicación: </b> ${location} <br>` : ''}
+                ${state ? `<b>Departamento: </b> ${state} <br>` : ''}
+                ${type ? `<b>Tipo de remate: </b> ${type} <br>` : ''}
+                ${modality ? `<b>Modalidad: </b> ${modality} <br>` : ''}
+                ${breeder ? `<b>Cabaña: </b> ${breeder} <br>` : ''}
+                ${financing ? `<b>Financiación: </b> ${financing}` : ''}
+              </p>
               ${detailsButton}
               ${broadcastButton}
           </div>
