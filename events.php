@@ -11,7 +11,7 @@ get_header();
 
 <section>
     <div class="container">
-        <div id="root" data-posts="12"></div>
+        <div id="root" data-posts="30"></div>
         <div id="skeleton"></div>
         <script src="<?php echo get_template_directory_uri(); ?>/custom/dist/src/main.js" type="module"></script>
     </div>
