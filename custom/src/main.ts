@@ -132,6 +132,14 @@ const fetchData = () => {
 };
 
 const renderData = async (posts: any[]) => {
+  // Sort the posts by start date.
+  posts.sort((postA, postB) => {
+    const dateA = new Date(postA.acf.inicio_del_remate);
+    const dateB = new Date(postB.acf.inicio_del_remate);
+
+    return dateA.getTime() - dateB.getTime();
+  })
+
   let postsWrapper = d.createElement("div");
   postsWrapper.classList.add("posts-wrapper");
 
