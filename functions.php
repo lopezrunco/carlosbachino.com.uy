@@ -73,3 +73,38 @@ function starterwptheme_widget_areas()
 }
 
 add_action('widgets_init', 'starterwptheme_widget_areas');
+
+function delete_expired_auction_posts_schedule() {
+    // Execute the delete posts function daily.
+    if (!wp_next_scheduled('delete_expired_auction_posts')) {
+        wp_schedule_event(time(), 'daily', 'delete_expired_auction_posts');
+    }
+}
+add_action('init', 'delete_expired_auction_posts_schedule');
+
+function delete_expired_auction_posts() {
+    $category_slug = 'remates';
+
+    $args = array (
+        'post_type' => 'post',
+        'category_name' => $category_slug,
+        'meta_key' => 'fin_del_remate' // Use this meta key to delete the post.
+    );
+
+    $query = new WP_Query( $args );
+
+    if ( $query->have_posts() ) {
+        $current_time = current_time('Y-m-d H:i:s'); // Using Wordpress settings timezone (Montevideo, Uruguay).
+
+        while ($query->have_posts()) {
+            $query->the_post();
+            $end_date = get_post_meta( get_the_ID(), 'fin_del_remate', true );
+
+            // Move to trash if the auction finish time has passed.
+            if (strtotime($end_date) < strtotime($current_time)) {
+                wp_trash_post( get_the_ID() );
+            }
+        }
+    }
+    wp_reset_postdata();
+}
