@@ -1,3 +1,11 @@
+<?php
+require_once get_template_directory() . '/functions.php';
+if (file_exists(COMPANY_DATA_PATH)) {
+    $json_data = file_get_contents(COMPANY_DATA_PATH);
+    $company_data = json_decode($json_data, true);
+}
+?>
+
 <section class="bottom bg-dark">
     <article class="container">
         <div class="row">
@@ -31,7 +39,7 @@
                 <a href="<?php echo esc_url(home_url('/')); ?>">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo de Carlos Bachino">
                 </a>
-                <p>“Trabajar espalda con espalda con el productor agropecuario”</p>
+                <p><?php echo esc_html($company_data['slogan']); ?></p>
                 <div class="d-flex">
                     <a href="https://web.facebook.com/carlosbachinoagronegocios" target="_blank"><i class="fa-brands me-3 fa-facebook"></i></a>
                     <a href="https://www.instagram.com/carlosbachinoagronegocios" target="_blank"><i class="fa-brands me-3 fa-instagram"></i></a>
