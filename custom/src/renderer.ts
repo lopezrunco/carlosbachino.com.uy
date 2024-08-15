@@ -106,7 +106,10 @@ const addModalListeners = () => {
     });
 };
 
-export const renderData = async (posts: any[]) => {
+export const renderData = async (data: any[]) => {
+    // Filter out posts already finished.
+    const posts = data.filter(post => new Date(post.acf.fin_del_remate) > new Date())
+
     // Sort the posts by start date.
     posts.sort((postA, postB) => {
         const dateA = new Date(postA.acf.inicio_del_remate);

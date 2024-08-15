@@ -7,7 +7,7 @@
                 <div class="separator"></div>
             </div>
         </div>
-        <div id="root" data-posts="3"></div>
+        <div id="root" data-posts="30"></div>
         <div id="skeleton"></div>
         <script src="<?php echo get_template_directory_uri(); ?>/custom/dist/src/main.js" type="module"></script>
     </div>
