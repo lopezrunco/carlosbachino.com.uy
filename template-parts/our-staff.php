@@ -19,6 +19,11 @@ if (file_exists(STAFF_DATA_PATH)) {
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-12 col-lg-8 offset-lg-2 mb-5">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/staff.jpeg" alt="Nuestro equipo" width="100%" />
+            </div>
+        </div>
         <div class="row team">
             <?php foreach ($staff_data as $item) { ?>
                 <div class="col-lg-4 mb-5">
