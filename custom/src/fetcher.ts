@@ -8,7 +8,8 @@ rootElement?.getAttribute("data-posts") ?? null;
 const postsToFetch: number = dataPostsAttr !== null ? parseInt(dataPostsAttr, 10) : 30;
 let currentPage: number = 1
 const categoryId: number = 11;
-const finalUrl: string = `${URL}?categories=${categoryId}&per_page=${postsToFetch}&page${currentPage}`;
+// const finalUrl: string = `${URL}?categories=${categoryId}&per_page=${postsToFetch}&page${currentPage}`;
+const finalUrl: string = `${URL}?categories=${categoryId}`;
 
 import { renderData } from "./renderer.js";
 import { Post } from "./interfaces/post.js";
