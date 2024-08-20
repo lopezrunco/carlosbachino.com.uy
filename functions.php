@@ -74,35 +74,42 @@ function starterwptheme_widget_areas()
 
 add_action('widgets_init', 'starterwptheme_widget_areas');
 
-function delete_expired_auction_posts_schedule() {
-    // Execute the delete posts function daily.
-    if (!wp_next_scheduled('delete_expired_auction_posts')) {
-        wp_schedule_event(time(), 'daily', 'delete_expired_auction_posts');
+function archive_expired_auction_posts_schedule()
+{
+    // Execute this action daily.
+    if (!wp_next_scheduled('archive_expired_auction_posts')) {
+        wp_schedule_event(time(), 'daily', 'archive_expired_auction_posts');
     }
 }
-add_action('init', 'delete_expired_auction_posts_schedule');
 
-function delete_expired_auction_posts() {
+add_action('init', 'archive_expired_auction_posts_schedule');
+
+function archive_expired_auction_posts()
+{
     $category_slug = 'remates';
+    $target_category_slug = 'sin-categoria';
 
-    $args = array (
+    $args = array(
         'post_type' => 'post',
         'category_name' => $category_slug,
-        'meta_key' => 'fin_del_remate' // Use this meta key to delete the post.
+        'meta_key' => 'fin_del_remate' // Use this meta key to archive the post.
     );
 
-    $query = new WP_Query( $args );
+    $query = new WP_Query($args);
 
-    if ( $query->have_posts() ) {
+    if ($query->have_posts()) {
         $current_time = current_time('Y-m-d H:i:s'); // Using Wordpress settings timezone (Montevideo, Uruguay).
 
         while ($query->have_posts()) {
             $query->the_post();
-            $end_date = get_post_meta( get_the_ID(), 'fin_del_remate', true );
+            $end_date = get_post_meta(get_the_ID(), 'fin_del_remate', true);
 
-            // Move to trash if the auction finish time has passed.
+            // Change category to 'Remates emitidos' if the auction finish time has passed.
             if (strtotime($end_date) < strtotime($current_time)) {
-                wp_trash_post( get_the_ID() );
+                // Get the ID of the target category
+                $target_category = get_category_by_slug($target_category_slug);
+                // Set the post category to the target category
+                wp_set_object_terms(get_the_ID(), $target_category->term_id, 'category');
             }
         }
     }
