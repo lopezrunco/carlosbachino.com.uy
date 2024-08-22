@@ -6,9 +6,9 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vetexoticos Wordpress theme">
+    <meta name="description" content="Carlos Bachino Agronegocios WP Theme">
     <meta name="author" content="Damian Lopez runco">
-    <link rel="shortcut icon" href="/wp-content/themes/vetexoticos/assets/images/logo.png">
+    <link rel="shortcut icon" href="wp-content/themes/carlosbachino/assets/images/favicon.png" type="image/x-icon">
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Bootstrap CDN -->
