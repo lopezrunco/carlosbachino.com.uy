@@ -14,7 +14,7 @@ get_template_part('template-parts/our-staff');
 $cta_bg_image_url = '/assets/images/call-to-action-bg.jpg';
 $cta_subtitle = 'Háganos llegar sus dudas, un especialista se contactará a la mayor brevedad posible.';
 $cta_title = '¿Necesita asesoramiento?';
-$contact_page = get_page_by_path('contact');
+$contact_page = get_page_by_path('contacto');
 $cta_button_url = get_permalink($contact_page->ID);
 $cta_button_text = 'Contacto';
 $cta_icon = 'fa-comment';

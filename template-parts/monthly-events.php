@@ -10,7 +10,7 @@ $monthly_events_posts = new WP_Query(
 );
 
 if ($monthly_events_posts->have_posts()) : ?>
-    <section class="monthly-events bg-primary">
+    <section class="monthly-events bg-primary fade-in delay-level3">
         <article class="container">
             <div class="row">
                 <?php
