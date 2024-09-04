@@ -74,7 +74,8 @@ function starterwptheme_widget_areas()
 
 add_action('widgets_init', 'starterwptheme_widget_areas');
 
-function archive_expired_auction_posts() {
+function archive_expired_auction_posts()
+{
     $category_slug = 'remates';
     $target_category_slug = 'sin-categoria';
 
@@ -117,3 +118,35 @@ function archive_expired_auction_posts() {
 }
 
 add_action('init', 'archive_expired_auction_posts');
+
+function subcategories_shortcode($atts)
+{
+    $atts = shortcode_atts(array(
+        'parent_id' => 0,
+    ), $atts, 'subcategories');
+
+    $args = array(
+        'taxonomy'   => 'category',
+        'child_of'   => $atts['parent_id'],
+        'hide_empty' => true,
+    );
+    $categories = get_terms($args);
+
+    if (empty($categories)) return '';
+
+    $output = '
+        <h5>Categorías</h5>
+        <ul class="categories-shortcode">';
+            foreach ($categories as $category) {
+                $output .= '
+                    <li class="cat-item">
+                        <a href="' . esc_url(get_category_link($category->term_id)) . '"> ' 
+                        . esc_html($category->name) .'</a>
+                    </li>';
+                }
+    $output .= '</ul>';
+
+    return $output;
+}
+
+add_shortcode('subcategories', 'subcategories_shortcode');
