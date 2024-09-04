@@ -17,4 +17,7 @@ get_header();
     </div>
 </section>
 
-<?php get_footer(); ?>
+<?php 
+    get_template_part('template-parts/monthly-events');
+    get_footer(); 
+?>

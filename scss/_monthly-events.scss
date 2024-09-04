@@ -1,0 +1,15 @@
+.monthly-events {
+    text-align: center;
+
+    h3 {
+        color: var(--light);
+    }
+
+    .post-thumbnail {
+        img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+        }
+    }
+}
