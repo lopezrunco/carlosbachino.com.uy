@@ -153,6 +153,7 @@ export const renderData = async (data: any[]) => {
         const breeder: string = post.acf.cabana;
         const financing: string = post.acf.financiacion;
         const broadcastLink: string = post.acf.enlace_transmision;
+        const preofferLink: string = post.acf.enlace_a_preoferta;
 
         const year: number = startDate.getFullYear();
         const month: string = months[startDate.getMonth() + 1];
@@ -163,13 +164,21 @@ export const renderData = async (data: any[]) => {
         singlePostWrapper.classList.add("single-post-wrapper");
 
         const detailsButton: string = post.content.rendered
-        ? `<a href="#" class="btn btn-outline details-button" data-post-id="${post.id}">Ver detalles <i class="fa-solid fa-chevron-right"></i></a>`
+        ? `<a href="#" class="btn btn-outline details-button" data-post-id="${post.id}">
+                Ver detalles <i class="fa-solid fa-chevron-right"></i>
+            </a>`
         : "";
 
         const broadcastButton: string = broadcastLink
         ? `<a href="${broadcastLink}" target="_blank" class="btn btn-${broadCasting ? 'primary' : 'outline'}">
             ${broadCasting ? "En vivo ahora" : "Enlace transmisión"} 
             <i class="fa-solid fa-video"></i></a>`
+        : "";
+
+        const preofferButton: string = preofferLink
+        ? `<a href="${preofferLink}" target="_blank" class="btn btn-outline">
+                Preofertar <i class="fa-solid fa-gavel"></i>
+            </a>`
         : "";
 
         singlePostWrapper.innerHTML = `
@@ -195,6 +204,7 @@ export const renderData = async (data: any[]) => {
                 </p>
                 ${detailsButton}
                 ${broadcastButton}
+                ${preofferButton}
             </div>
             </div>`;
 
