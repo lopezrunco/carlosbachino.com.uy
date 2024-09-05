@@ -44,9 +44,8 @@
     </header>
 
     <div class="main-wrapper">
-        <?php if (!is_front_page() && !is_404()) : ?>
+        <?php if (!is_front_page() && !is_404()) {
 
-            <?php
             $breadcrumb = '';
             $page_title = '';
 
@@ -68,18 +67,6 @@
                 $page_title = get_the_title();
                 $breadcrumb = $page_title;
             }
-            ?>
 
-            <header class="page-title">
-                <div class="gray-overlay">
-                    <h1 class="heading fade-in delay-level2">
-                        <?php echo $page_title; ?>
-                    </h1>
-                    <div class="breadcrumbs fade-in delay-level2">
-                        <i class="fa-solid fa-thumbtack me-2"></i>
-                        <a href="<?php echo esc_url(home_url('/')); ?>">Inicio</a> / <?php echo $breadcrumb; ?>
-                    </div>
-                </div>
-            </header>
-
-        <?php endif; ?>
+            include get_template_directory() . '/template-parts/page-title.php';
+        } ?>

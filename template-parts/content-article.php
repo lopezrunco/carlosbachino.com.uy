@@ -6,7 +6,7 @@
                 // Check if it's a single blog post page and show content accordingly.
                 if (is_single()) :
                 ?>
-                    <header class="content-header mb-3">
+                    <div class="content-header mb-3">
 
                         <?php if (has_post_thumbnail()) : ?>
                             <div class="full-width-img mb-4">
@@ -41,7 +41,7 @@
                                 </a>
                             </span>
                         </div>
-                    </header>
+                    </div>
                 <?php endif; ?>
 
                 <div class="content-body">

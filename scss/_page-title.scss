@@ -1,0 +1,45 @@
+.page-title {
+    position: relative;
+    text-align: center;
+    background-image: url('./assets/images/page-title.jpg');
+    background-position: left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .gray-overlay {
+        padding: 7rem 0 2rem;
+
+        .heading {
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .breadcrumbs {
+            display: none;
+
+            color: var(--yellow);
+
+            a {
+                color: var(--yellow) !important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .page-title {
+        .gray-overlay {
+            padding: 12rem 0 7rem;
+
+            .heading {
+                font-size: 2.5rem;
+            }
+
+            .breadcrumbs {
+                display: block;
+            }
+        }
+    }
+}
