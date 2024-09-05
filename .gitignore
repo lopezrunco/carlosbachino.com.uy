@@ -7,18 +7,11 @@ todo.md
 
 /data
 
-/template-parts/top-hero.php
-/template-parts/wapp-call-to-action.php
-/template-parts/why-us.php
-
 search.php
 style.css
 style.css.map
 test.php
 
-/scss/_call-to-action-wapp.scss
-/scss/_events-grid.scss
-/scss/_pagination.scss
 /scss/_product-categories.scss
 /scss/_product-grid.scss
 /scss/_search-results.scss

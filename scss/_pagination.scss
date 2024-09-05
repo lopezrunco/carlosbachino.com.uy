@@ -1,0 +1,29 @@
+.pagination {
+    margin-bottom: 3rem;
+    justify-content: center;
+
+    .page-numbers {
+        display: inline-block;
+        padding: .5rem 1rem;
+        margin: 0 .1rem;
+        border: 1px solid var(--lightgray);
+        border-radius: var(--border-radius);
+        color: var(--dark);
+        text-decoration: none;
+        transition: var(--main-transition);
+
+        &:hover {
+            background-color: var(--lightgray);
+        }
+    }
+
+    .current {
+        background-color: var(--primary);
+        color: var(--white);
+
+        &:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+    }
+}
