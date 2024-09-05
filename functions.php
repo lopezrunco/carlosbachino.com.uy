@@ -5,6 +5,7 @@ define('STAFF_DATA_PATH', get_template_directory() . '/data/staff.json');
 define('COMPANY_DATA_PATH', get_template_directory() . '/data/company.json');
 define('OFFICES_DATA_PATH', get_template_directory() . '/data/offices.json');
 define('VENUES_DATA_PATH', get_template_directory() . '/data/venues.json');
+define('SERVICES_DATA_PATH', get_template_directory() . '/data/services.json');
 
 function starterwptheme_theme_support()
 {
