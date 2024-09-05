@@ -1,19 +1,11 @@
-/assets
 todo.md
+
+/assets
+/data
 
 /custom/dist
 /custom/node_modules
 /custom/config.ts
 
-/data
-
-search.php
 style.css
 style.css.map
-test.php
-
-/scss/_product-categories.scss
-/scss/_product-grid.scss
-/scss/_search-results.scss
-/scss/_services-page.scss
-/scss/_top.scss
