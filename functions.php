@@ -3,6 +3,7 @@
 // Define path constants.
 define('STAFF_DATA_PATH', get_template_directory() . '/data/staff.json');
 define('COMPANY_DATA_PATH', get_template_directory() . '/data/company.json');
+define('OFFICES_DATA_PATH', get_template_directory() . '/data/offices.json');
 
 function starterwptheme_theme_support()
 {

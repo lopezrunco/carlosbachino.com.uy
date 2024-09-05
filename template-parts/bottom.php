@@ -4,32 +4,15 @@ if (file_exists(COMPANY_DATA_PATH)) {
     $json_data = file_get_contents(COMPANY_DATA_PATH);
     $company_data = json_decode($json_data, true);
 }
+if (file_exists(OFFICES_DATA_PATH)) {
+    $json_data = file_get_contents(OFFICES_DATA_PATH);
+    $offices_data = json_decode($json_data, true);
+}
 ?>
 
 <section class="bottom bg-dark">
     <article class="container">
         <div class="row">
-            <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
-                <h4>Rocha</h4>
-                <a><i class="me-3 fa-solid fa-location-dot"></i> Dr. Nicolás Corbo 1485 - Lascano</a>
-                <a href="tel:+59844567865"><i class="me-3 fa-solid fa-phone"></i> 4456 7865</a>
-                <a href="tel:+59899856005"><i class="me-3 fa-solid fa-mobile"></i> 099 856 005</a>
-                <a><i class="me-3 fa-solid fa-envelope"></i> administracion <br>@carlosbachino.com</a>
-            </div>
-            <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
-                <h4>Maldonado</h4>
-                <a><i class="me-3 fa-solid fa-location-dot"></i> 25 de Agosto 640, Aiguá</a>
-                <a href="tel:+59844462723"><i class="me-3 fa-solid fa-phone"></i> 4446 2723</a>
-                <a href="tel:+59891365860"><i class="me-3 fa-solid fa-mobile"></i> 091 365 860</a>
-                <a><i class="me-3 fa-solid fa-envelope"></i> administracion <br>@carlosbachino.com</a>
-            </div>
-            <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
-                <h4>Treinta y Tres</h4>
-                <a><i class="me-3 fa-solid fa-location-dot"></i> Francisco Tajes esq. Manuel Coronel, S/N</a>
-                <a href="tel:+59844583524"><i class="me-3 fa-solid fa-phone"></i> 4458 3524</a>
-                <a href="tel:+59891339957"><i class="me-3 fa-solid fa-mobile"></i> 091 339 957</a>
-                <a><i class="me-3 fa-solid fa-envelope"></i> administracion <br>@carlosbachino.com</a>
-            </div>
             <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
                 <?php
                 if (function_exists('the_custom_logo')) {
@@ -46,6 +29,18 @@ if (file_exists(COMPANY_DATA_PATH)) {
                     <a href="https://twitter.com/carlos_bachino" target="_blank"><i class="fa-brands me-3 fa-x-twitter"></i></a>
                 </div>
             </div>
+
+            <?php foreach($offices_data as $office) : ?>
+                <div class="col-lg-3 mb-5 mb-lg-0 bottom-column">
+                    <h4><?= $office['state']; ?></h4>
+                    <?php foreach($office['data'] as $data_item) : ?>
+                        <a href="<?= $data_item['content'][0]['link']; ?>" target="_blank">
+                            <i class="me-3 <?= $data_item['icon']; ?>"></i> <?= $data_item['content'][0]['info']; ?>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endforeach; ?>
+
         </div>
     </article>
 </section>
