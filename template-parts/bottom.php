@@ -20,7 +20,7 @@ if (file_exists(OFFICES_DATA_PATH)) {
                 }
                 ?>
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Logo de Carlos Bachino">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="<?= $company_data['companyName']; ?>">
                 </a>
                 <p><?php echo esc_html($company_data['slogan']); ?></p>
                 <div class="d-flex">
