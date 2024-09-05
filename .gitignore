@@ -7,14 +7,6 @@ todo.md
 
 /data
 
-/template-parts/bottom-hero.php
-/template-parts/brands.php
-/template-parts/featured-services.php
-/template-parts/food-brands.php
-/template-parts/image-slider.php
-/template-parts/map.php
-/template-parts/our-values.php
-/template-parts/testimonials.php
 /template-parts/top-hero.php
 /template-parts/wapp-call-to-action.php
 /template-parts/why-us.php
@@ -26,14 +18,9 @@ test.php
 
 /scss/_call-to-action-wapp.scss
 /scss/_events-grid.scss
-/scss/_featured-services.scss
-/scss/_food-brands.scss
-/scss/_image-slider.scss
-/scss/_our-values.scss
 /scss/_pagination.scss
 /scss/_product-categories.scss
 /scss/_product-grid.scss
 /scss/_search-results.scss
 /scss/_services-page.scss
-/scss/_testimonials.scss
 /scss/_top.scss
