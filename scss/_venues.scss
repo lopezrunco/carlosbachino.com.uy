@@ -1,4 +1,4 @@
-.offices-grid {
+.venues {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -40,7 +40,7 @@
 }
 
 @media screen and (min-width: 992px) {
-    .offices-grid {
+    .venues {
         grid-template-columns: repeat(3, 1fr);
 
         .box {
