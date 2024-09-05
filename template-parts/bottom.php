@@ -8,6 +8,10 @@ if (file_exists(OFFICES_DATA_PATH)) {
     $json_data = file_get_contents(OFFICES_DATA_PATH);
     $offices_data = json_decode($json_data, true);
 }
+if (file_exists(SOCIAL_DATA_PATH)) {
+    $json_data = file_get_contents(SOCIAL_DATA_PATH);
+    $social_data = json_decode($json_data, true);
+}
 ?>
 
 <section class="bottom bg-dark">
@@ -24,9 +28,11 @@ if (file_exists(OFFICES_DATA_PATH)) {
                 </a>
                 <p><?php echo esc_html($company_data['slogan']); ?></p>
                 <div class="d-flex">
-                    <a href="https://web.facebook.com/carlosbachinoagronegocios" target="_blank"><i class="fa-brands me-3 fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/carlosbachinoagronegocios" target="_blank"><i class="fa-brands me-3 fa-instagram"></i></a>
-                    <a href="https://twitter.com/carlos_bachino" target="_blank"><i class="fa-brands me-3 fa-x-twitter"></i></a>
+                    <?php foreach ($social_data as $item) : ?>
+                        <a href="<?= $item['link']; ?>" target="_blank" title="<?= $item['title']; ?>">
+                            <i class="<?= $item['icon']; ?> me-3"></i>
+                        </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
 
@@ -40,7 +46,6 @@ if (file_exists(OFFICES_DATA_PATH)) {
                     <?php endforeach; ?>
                 </div>
             <?php endforeach; ?>
-
         </div>
     </article>
 </section>
