@@ -1,0 +1,41 @@
+section.testimonials {
+    padding: 0;
+    text-align: center;
+
+    h2,
+    p {
+        color: var(--white);
+    }
+
+    span {
+        color: var(--secondary);
+    }
+
+    .container {
+        padding: 6rem 0;
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+            .image-wrapper {
+                overflow: hidden;
+                border-radius: 50%;
+
+                img {
+                    max-width: 100px;
+                    cursor: pointer;
+                    transition: var(--main-transition);
+
+                    &:hover,
+                    &:active {
+                        transform: scale(1.025);
+                    }
+                }
+            }
+        }
+    }
+}
