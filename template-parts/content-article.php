@@ -1,3 +1,21 @@
+<?php
+    // Check the category of the actual article.
+    // Only show sidebar and agenda section when the article is "inmueble".
+    $categories = get_the_category();
+    $show_secondary_content = false;
+
+    foreach ($categories as $category) {
+        // Check if the category has a parent and if the parent is "inmuebles".
+        if ($category->parent != 0) {
+            $parent_category = get_category($category->parent);
+            if ($parent_category->slug === 'inmuebles') {
+                $show_secondary_content = true;
+                break; // Exit loop if the parent category is found.
+            }
+        }
+    }
+?>
+
 <section>
     <article class="container fade-in delay-level3">
         <div class="row">
@@ -48,10 +66,12 @@
                     <?php
                     the_content();
 
-                    // Agenda section
-                    $post_title = get_the_title();
-                    if ($post_title) {
-                        include_once 'agenda.php';
+                    // Agenda section (only show in inmuebles articles).
+                    if ($show_secondary_content) {
+                        $post_title = get_the_title();
+                        if ($post_title) {
+                            include_once 'agenda.php';
+                        }
                     }
 
                     // Comments section
@@ -61,7 +81,11 @@
 
             </div>
             <div class="col-lg-3">
-                <?php get_sidebar(); ?>
+                <?php 
+                    if ($show_secondary_content) {
+                        get_sidebar();
+                    }
+                ?>
             </div>
         </div>
     </article>

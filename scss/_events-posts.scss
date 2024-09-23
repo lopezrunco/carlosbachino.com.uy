@@ -46,6 +46,34 @@
             position: relative;
             overflow: hidden;
 
+            .copy-url-button {
+                outline: none;
+                border: none;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                z-index: 30;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                min-width: 42px;
+                min-height: 40px;
+                padding: .2rem 0;
+                background: var(--white);
+                color: var(--dark);
+                align-items: center;
+                text-decoration: none;
+                font-weight: 900;
+                font-size: .9rem;
+                box-shadow: var(--box-shadow);
+                transition: var(--main-transition);
+
+                &:active,
+                &:hover {
+                    background: var(--lightgray);
+                }
+            }
+
             img {
                 width: 100%;
                 height: auto;

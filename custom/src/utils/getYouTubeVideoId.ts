@@ -4,7 +4,10 @@ export const getYouTubeVideoId = (url: string): string | null => {
         /https:\/\/www\.youtube\.com\/embed\/([^"?]+)/,  // Embed URL
         /https:\/\/www\.youtube\.com\/watch\?v=([^"&?/]+)/,  // Long URL
         /https:\/\/m\.youtube\.com\/watch\?v=([^"&?/]+)/,  // Mobile URL
-        /https:\/\/youtu\.be\/([^"&?/]+)/  // Short URL
+        /https:\/\/youtu\.be\/([^"&?/]+)/,  // Short URL
+        /https:\/\/www\.youtube\.com\/live\/([^"?]+)/,  // Live stream URL
+        /https:\/\/www\.youtube\.com\/watch\?v=([^"&?/]+)&t=\d+S/,  // Live stream URL with timestamp
+        /https:\/\/m\.youtube\.com\/live\/([^"?]+)/  // Mobile live stream URL
     ]
 
     for (const pattern of youtubeLinkPatterns) {

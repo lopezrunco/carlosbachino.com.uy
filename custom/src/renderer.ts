@@ -8,6 +8,7 @@ const skeletonContainer = document.getElementById("skeleton");
 import { getBroadcastModal } from "./utils/getBroadcastModal.js";
 import { getImageUrl } from "./utils/get-image-url.js";
 import { months } from "./utils/months.js";
+import { copyUrl } from "./utils/copy-url.js";
 
 export const createModal = () => {
     const modal: HTMLDivElement = d.createElement("div");
@@ -144,6 +145,7 @@ export const renderData = async (data: any[]) => {
         // the all the condition to FALSE.
         const broadCasting = startDate < currentDate && currentDate < endDate;
 
+        const postUrl: string = post.link;
         const title: string = post.title.rendered;
         const imageUrl: string = await getImageUrl(post);
         const location: string = post.acf.ubicacion;
@@ -181,36 +183,43 @@ export const renderData = async (data: any[]) => {
             </a>`
         : "";
 
+        const copyUrlButton: string = postUrl
+        ? `<button class="copy-url-button" data-url="${postUrl}">
+                <i class="fa-regular fa-copy"></i>
+            </button>`
+        : "";
+
         singlePostWrapper.innerHTML = `
             <div class="item-wrapper">
-            <div class="image-wrapper">
-                <img src="${imageUrl}" alt="Imagen de ${title}" />
-                <div class="metadata-wrapper">
-                    <span>${day}</span>
-                    <span>${month}</span>
-                    <span>${year}</span>
-                    <span>${time}</span>
+                <div class="image-wrapper">
+                    <img src="${imageUrl}" alt="Imagen de ${title}" />
+                    ${copyUrlButton}
+                    <div class="metadata-wrapper">
+                        <span>${day}</span>
+                        <span>${month}</span>
+                        <span>${year}</span>
+                        <span>${time}</span>
+                    </div>
                 </div>
-            </div>
-            <div class="info-wrapper">
-                <h3>${title}</h3>
-                <p>
-                    ${location ? `<b>Ubicación: </b> ${location} <br>` : ''}
-                    ${state ? `<b>Departamento: </b> ${state} <br>` : ''}
-                    ${type ? `<b>Tipo de remate: </b> ${type} <br>` : ''}
-                    ${modality ? `<b>Modalidad: </b> ${modality} <br>` : ''}
-                    ${breeder ? `<b>Cabaña: </b> ${breeder} <br>` : ''}
-                    ${financing ? `<b>Financiación: </b> ${financing}` : ''}
-                </p>
-                ${detailsButton}
-                ${broadcastButton}
-                ${preofferButton}
-            </div>
+                <div class="info-wrapper">
+                    <h3>${title}</h3>
+                    <p>
+                        ${location ? `<b>Ubicación: </b> ${location} <br>` : ''}
+                        ${state ? `<b>Departamento: </b> ${state} <br>` : ''}
+                        ${type ? `<b>Tipo de remate: </b> ${type} <br>` : ''}
+                        ${modality ? `<b>Modalidad: </b> ${modality} <br>` : ''}
+                        ${breeder ? `<b>Cabaña: </b> ${breeder} <br>` : ''}
+                        ${financing ? `<b>Financiación: </b> ${financing}` : ''}
+                    </p>
+                    ${detailsButton}
+                    ${broadcastButton}
+                    ${preofferButton}
+                </div>
             </div>`;
 
         postsWrapper.appendChild(singlePostWrapper);
 
-        if (broadCasting) {
+        if (broadCasting && broadcastLink) {
         broadcastingWrapper.innerHTML = `${getBroadcastModal(broadcastLink, title)}`
         }
     }
@@ -222,4 +231,11 @@ export const renderData = async (data: any[]) => {
         skeletonContainer.innerHTML = '';
     }
     addModalListeners();
+
+    d.querySelectorAll('.copy-url-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.getAttribute('data-url');
+            if (url) { copyUrl(url) }
+        })
+    })
 };
