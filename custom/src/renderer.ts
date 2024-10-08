@@ -108,6 +108,20 @@ const addModalListeners = () => {
 };
 
 export const renderData = async (data: any[]) => {
+    // Check the existence of the neccesary HTML elements.
+    if (!rootElement || !skeletonContainer) {
+        console.error('Required HTML elements not found.')
+        if (!rootElement) console.error('Root element not found.')
+        if (!skeletonContainer) console.error('Skeleton container element not found.')
+        return
+    }
+
+    if (data.length <= 0) {
+        skeletonContainer.innerHTML = '';
+        rootElement.innerHTML = '<div class="no-events-msj"><p>En este momento, no hay remates cargados.<br/>Puede encontrar los remates programados para los próximos meses en la siguiente sección.</p><i class="fa-solid fa-chevron-down"></i><div>'
+        return
+    }
+
     // Filter out posts already finished.
     const posts = data.filter(post => new Date(post.acf.fin_del_remate) > new Date())
 
@@ -126,10 +140,6 @@ export const renderData = async (data: any[]) => {
     broadcastingWrapper.classList.add("broadcasting-wrapper");
 
     // Clean the skeleton.
-    if (!rootElement) {
-        console.error('Root element not found')
-        return
-    }
     rootElement.innerHTML = ''
 
     for (const post of posts) {
@@ -220,16 +230,15 @@ export const renderData = async (data: any[]) => {
         postsWrapper.appendChild(singlePostWrapper);
 
         if (broadCasting && broadcastLink) {
-        broadcastingWrapper.innerHTML = `${getBroadcastModal(broadcastLink, title)}`
+            broadcastingWrapper.innerHTML = `${getBroadcastModal(broadcastLink, title)}`
         }
     }
     if (rootElement) {
         rootElement.appendChild(broadcastingWrapper)
         rootElement.appendChild(postsWrapper);
     }
-    if (skeletonContainer) {
-        skeletonContainer.innerHTML = '';
-    }
+    skeletonContainer.innerHTML = '';
+
     addModalListeners();
 
     d.querySelectorAll('.copy-url-button').forEach(button => {
