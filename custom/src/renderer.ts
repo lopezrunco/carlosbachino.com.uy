@@ -118,7 +118,7 @@ export const renderData = async (data: any[]) => {
 
     if (data.length <= 0) {
         skeletonContainer.innerHTML = '';
-        rootElement.innerHTML = '<div class="no-events-msj"><p>En este momento, no hay remates cargados.<br/>Puede encontrar los remates programados para los próximos meses en la siguiente sección.</p><i class="fa-solid fa-chevron-down"></i><div>'
+        rootElement.innerHTML = '<div class="no-events-msj"><p>En este momento, no hay remates cargados.<br/>Por favor, intente nuevamente más tarde.<div>'
         return
     }
 
